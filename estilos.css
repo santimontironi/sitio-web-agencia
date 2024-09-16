@@ -1,0 +1,721 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Black+Ops+One&display=swap');
+
+*{
+    user-select: none;
+}
+
+.hidden{
+    opacity: 0;
+    transition: 1s;
+}
+
+.mostrar{
+    opacity: 1;
+    animation: scroll 1s ease-in-out;
+}
+
+@keyframes scroll{
+    from{
+        transform: translateY(-120px);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+
+.oscuro{
+    background-color: #010314;
+    color: white;
+}
+
+nav{
+    background: linear-gradient(to right,#14162f,#2e65b2);
+    font-family: "Inconsolata", monospace;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+#btn-oscuro{
+    border: none;
+    background-color: transparent;
+    color: white;
+}
+
+.introduccion{
+    max-width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+    padding: 26px;
+}
+
+.introduccion h1{
+    font-family: "Black Ops One", system-ui;
+    max-width: 900px;
+    font-size: 60px;
+}
+
+.introduccion p{
+    font-family: "Inconsolata", monospace;
+    font-weight: 600;
+    font-size: 22px;
+    max-width: 700px;
+}
+
+.introduccion a{
+    font-family: "Inconsolata", monospace;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 10px;
+    background-color: #14162f;
+    color: white;
+}
+
+.nosotros{
+    height: 190vh;
+    width: 100%;
+}
+
+.portada-nosotros{
+    height: 320px;
+    background: linear-gradient(rgba(0,0,0,0.40),rgba(0,0,0,0.20)),url(img/portada-nosotros.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    font-family: "Black Ops One", system-ui;
+    font-size: 75px;
+}
+
+.contenido-nosotros{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+    gap: 30px;
+    font-family: "Inconsolata", monospace;
+}
+
+.contenido-nosotros figure{
+    width: 570px;
+    overflow: hidden;
+}
+
+.contenido-nosotros img:hover{
+    transform: scale(1.1);
+    transition: .8s;
+}
+
+.contenido-nosotros p{
+    font-size: 20px;
+}
+
+.tecnologias-nosotros{
+    margin-top: 5%;
+    font-family: 'Inconsolata',monospace;
+}
+
+.tecnologias{
+    display: flex;
+    gap: 50px;
+}
+
+.slider-container{
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider{
+    width: calc(145px * 7);
+    animation: slide 15s linear infinite;
+}
+
+@keyframes slide{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+.servicios{
+    height: 160vh;
+    width: 100%;
+}
+
+.portada-servicios{
+    height: 320px;
+    background: linear-gradient(rgba(0,0,0,0.40),rgba(0,0,0,0.20)),url(img/portada-servicios.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: "Black Ops One", system-ui;
+    font-size: 75px;
+    font-weight: 400;
+}
+
+.contenedor-servicios{
+    width: 100%;
+    height: 100vh;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.contenedor-servicios .row{
+    gap: 25px;
+}
+
+.contenedor-servicios .servicios-arriba{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.contenedor-servicios .servicios-abajo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.servicio{
+    background: linear-gradient(#183155,#0a1e3b);
+    font-family: 'Inconsolata',monospace;
+}
+
+.servicio i{
+    color: #fff;
+    font-size: 70px;
+}
+
+.servicio h1{
+    color: #d8cf13;
+    font-size: 30px;
+}
+
+.servicio p{
+    color: white;
+    font-weight: 200;
+    max-width: 760px;
+}
+
+.servicio:hover{
+    transition: .8s;
+    transform: scale(1.05);
+    box-shadow: 4px 4px 20px #d8cf13;
+}
+
+.contacto{
+    max-width: 100%;
+    height: 150vh;
+}
+
+.portada-contacto{
+    width: 100%;
+    height: 320px;
+    background: linear-gradient(rgba(0,0,0,0.40),rgba(0,0,0,0.20)),url(img/portada-contacto.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: "Black Ops One", system-ui;
+    font-size: 75px;
+    font-weight: 400;
+}
+
+.contenido-contacto{
+    display: flex;
+    margin-top: 5%;
+    justify-content: center;
+    margin-left: 8%;
+    margin-right: 8%;
+}
+
+.donde-contactar{
+    display: flex;
+    flex-direction: column;
+    background-color: #2e65b2;
+    padding: 45px;
+    gap: 30px;
+    font-family: 'Inconsolata',monospace;
+}
+
+.donde-contactar h1{
+    color: #fff;
+}
+
+.donde-contactar p{
+    font-size: 20px;
+    color: #fff;
+}
+
+.donde-contactar i{
+    color: #d8cf13;
+    font-size: 40px;
+    margin-right: 15px;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    background-color: #183155;
+}
+
+.formulario h1{
+    color: #d8cf13;
+    font-family: 'Inconsolata',monospace;
+}
+
+.formulario form{
+    font-family: 'Inconsolata',monospace;
+}
+
+.formulario label{
+    color: #fff;
+}
+
+.formulario input[type="submit"]{
+    background-color: #d8cf13;
+    width: 180px;
+    padding: 12px;
+    border: none;
+}
+
+.boton-whatsapp{
+    width: 70px;
+    height: 70px;
+    margin-top: 15px;
+    background-color: #25d366;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 50%;
+    position: fixed;
+    right: 30px;
+    bottom: 70px;
+    animation: movimiento 3s ease-in-out infinite;
+}
+
+@keyframes movimiento{
+    0%,100%{
+        transform: translateY(30px);
+    }
+    50%{
+        transform: translateY(10px);
+    }
+}
+
+.boton-whatsapp i{
+    font-size: 40px;
+    color: #fff;
+}
+
+.mapa{
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mapa iframe{
+    width: 100%;
+    height: 360px;
+}
+
+.footer{
+    width: 100%;
+    height: 30vh;
+    background: linear-gradient(to right,#001D3D,#001D3D);
+    margin-top: 35%;
+    color: #fff;
+    font-family: 'Inconsolata',monospace;
+    padding: 55px;
+    position: relative;
+}
+
+.izquierda{
+    width: 700px;
+    display: flex;
+    gap: 30px;
+}
+
+.titulo-logo{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border-right: solid 3px #d8cf13;
+}
+
+.titulo-logo p{
+    font-size: 40px;
+    margin-right: 15px;
+}
+
+.titulo-logo span{
+    color: #6086bb;
+}
+
+.titulo-logo img{
+    width: 80px;
+    margin-right: 25px;
+}
+
+.enlaces{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.enlaces a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.enlaces a:hover{
+    color: #d8cf13;
+}
+
+.derecha{
+    position: absolute;
+    top: 40%;
+    right: 90px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-size: 20px;
+}
+
+.bi-youtube{
+    color: #fff;
+    background-color: red;
+    padding: 10px;
+    border-radius: 999px;
+}
+
+.bi-twitter-x{
+    color: #000;
+    background-color: #fff;
+    padding: 12px;
+    border-radius: 999px;
+}
+
+.bi-facebook{
+    color: #000;
+    background-color: #2e65b2;
+    color: #fff;
+    padding: 12px;
+    border-radius: 999px;
+}
+
+.centro{
+    text-align: center;
+    font-weight: 100;
+    margin-top: 15px;
+}
+
+@media (min-width:300px) and (max-width:740px){
+    .introduccion h1{
+        font-size: 40px; 
+    }
+    .introduccion p{
+        max-width: 900px;
+        font-size: 18px;
+    }
+    .introduccion a{
+        font-size: 20px;
+        padding: 12px;
+    }
+    .nosotros{
+        height: auto;
+    }
+    .nosotros .info p{
+        font-size: 20px;
+    }
+    .portada-nosotros{
+        width: 100%;
+        height: 200px;
+        font-size: 50px;
+        text-align: center;
+        background-position: center;
+        background-attachment: initial;
+    }
+    .contenido-nosotros{
+        margin-top: 15%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+    .contenido-nosotros figure{
+        width: 370px;
+    }
+    .contenido-nosotros img:hover{
+        transform: none;
+        transition: none;
+    }
+    .contenido-nosotros .info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .contenido-nosotros h1{
+        width: 370px;
+        font-size: 35px;
+    }
+    .contenido-nosotros p{
+        font-size: 23px;
+        width: 350px;
+    }
+    .tecnologias{
+        flex-direction: column;
+        gap: 0px;
+    }
+    .slider{
+        height: calc(145px * 7);
+        animation: none;
+    }
+    .servicios{
+        height: auto;
+    }
+    .contenedor-servicios{
+        height: auto;
+    }
+    .servicios-arriba{
+        height: auto;
+    }
+    .servicios-abajo{
+        height: auto;
+        margin-bottom: 30px;
+    }
+    .portada-servicios{
+        width: 100%;
+        height: 200px;
+        font-size: 50px;
+        margin-top: 10%;
+        background-position: center;
+        background-attachment: initial;
+    }
+    .servicio{
+        width: 360px;
+    }
+    .servicio:hover{
+        box-shadow: none;
+    }
+    .contacto{
+        height: auto;
+    }
+    .portada-contacto{
+        width: 100%;
+        height: 200px;
+        font-size: 50px;
+        background-position: center;
+        background-attachment: initial;
+    }
+    .mapa{
+        margin-top: 120px;
+    }
+    .footer{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 12%;
+    }
+    .izquierda{
+        flex-direction: column;
+        width: auto;
+    }
+    .titulo-logo{
+        border-right: none;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        padding-right: 0;
+        border-bottom: solid 3px #d8cf13;
+    }
+    .titulo-logo img{
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .enlaces{
+        display: flex;
+        flex-direction: column;
+    }
+    .derecha{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: static;
+        text-align: center;
+        margin-top: 20%;
+        margin-bottom: 30px;
+    }
+}
+
+@media (min-width:750px) and (max-width:1200px){
+    #menu a{
+        font-size: 28px;
+    }
+    .introduccion h1{
+        font-size: 80px; 
+    }
+    .introduccion p{
+        max-width: 900px;
+        font-size: 35px;
+    }
+    .introduccion a{
+        font-size: 20px;
+        padding: 12px;
+    }
+    .nosotros{
+        height: auto;
+    }
+    .portada-nosotros{
+        height: 320px;
+        font-size: 80px;
+        background-position: center;
+        background-attachment: initial;
+        text-align: center;
+    }
+    .contenido-nosotros{
+        margin-top: 15%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+    .contenido-nosotros figure{
+        width: 600px;
+    }
+    .contenido-nosotros img:hover{
+        transform: none;
+        transition: none;
+    }
+    .contenido-nosotros .info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .contenido-nosotros h1{
+        width: 500px;
+        font-size: 60px;
+    }
+    .contenido-nosotros p{
+        width: 650px;
+        font-size: 30px;
+    }
+    .tecnologias{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        place-items: center;
+        gap: 50px;
+    }
+    .tecnologias-nosotros h1{
+        font-size: 45px;
+    }
+    .slider{
+        height: 400px;
+        animation: none;
+    }
+    .servicios{
+        height: auto;
+    }
+    .contenedor-servicios{
+        height: auto;
+        margin-bottom: 60px;
+    }
+    .portada-servicios{
+        height: 320px;
+        font-size: 90px;
+        margin-top: 10%;
+        background-position: center;
+        background-attachment: initial;
+    }
+    .servicio{
+        width: 360px;
+    }
+    .servicio:hover{
+        box-shadow: none;
+    }
+    .contacto{
+        height: auto;
+    }
+    .portada-contacto{
+        height: 320px;
+        font-size: 90px;
+        background-position: center;
+        background-attachment: initial;
+    }
+    .mapa{
+        width: 100%;
+        margin-top: 120px;
+    }
+    .footer{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 12%;
+    }
+    .izquierda{
+        flex-direction: column;
+        width: auto;
+    }
+    .titulo-logo{
+        border-right: none;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        padding-right: 0;
+        border-bottom: solid 3px #d8cf13;
+    }
+    .titulo-logo p{
+        font-size: 55px;
+    }
+    .titulo-logo img{
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .enlaces{
+        display: flex;
+        flex-direction: column;
+    }
+    .enlaces a{
+        font-size: 30px;
+    }
+    .derecha{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: static;
+        text-align: center;
+        margin-top: 20%;
+        margin-bottom: 30px;
+        font-size: 40px;
+    }
+    .centro{
+        font-size: 28px;
+    }
+}
