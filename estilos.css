@@ -133,8 +133,8 @@ nav{
 }
 
 .slider{
-    width: calc(145px * 7);
-    animation: slide 15s linear infinite;
+    width: calc(145px * 9);
+    animation: slide 14s linear infinite;
 }
 
 @keyframes slide{
