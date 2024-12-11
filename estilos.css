@@ -488,7 +488,7 @@ nav{
         gap: 0px;
     }
     .slider{
-        height: calc(145px * 7);
+        height: calc(145px * 9);
         animation: none;
     }
     .servicios{
