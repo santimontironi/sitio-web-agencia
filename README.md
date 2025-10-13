@@ -2,7 +2,7 @@
 
 ## Descripción del Proyecto
 
-FullWeb es un sitio web corporativo desarrollado para una agencia de desarrollo de software, creado como proyecto final de carrera universitaria. La plataforma presenta los servicios, portafolio y capacidades de la agencia, ofreciendo una experiencia de usuario moderna y accesible.
+FullWeb es un sitio web corporativo desarrollado para mi emprendimiento lanzado en 2023 de desarrollo de software. La plataforma presenta los servicios, portafolio y capacidades de la agencia, ofreciendo una experiencia de usuario moderna y accesible.
 
 ---
 
