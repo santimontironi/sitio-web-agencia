@@ -342,7 +342,7 @@ nav{
     height: 360px;
 }
 
-.footer{
+footer{
     width: 100%;
     height: auto;
     background: linear-gradient(to right,#001D3D,#001D3D);
@@ -433,7 +433,7 @@ nav{
     margin-top: 15px;
 }
 
-@media (min-width:300px) and (max-width:740px){
+@media (min-width:300px) and (max-width:678px){
     .introduccion h1{
         font-size: 40px; 
     }
