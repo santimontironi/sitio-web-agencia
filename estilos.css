@@ -30,15 +30,12 @@
 }
 
 #menu{
-    height: 150px;
-}
-
-nav{
     background: linear-gradient(to right,#14162f,#2e65b2);
     font-family: "Inconsolata", monospace;
     font-weight: 400;
     font-size: 18px;
     padding: 10px;
+    height: auto;
 }
 
 #btn-oscuro{
@@ -48,8 +45,8 @@ nav{
 }
 
 .introduccion{
-    max-width: 100%;
-    height: 80vh;
+    min-width: 100%;
+    height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -61,15 +58,15 @@ nav{
 
 .introduccion h1{
     font-family: "Black Ops One", system-ui;
-    max-width: 900px;
-    font-size: 60px;
+    width: 400px;
+    font-size: 36px;
 }
 
 .introduccion p{
     font-family: "Inconsolata", monospace;
     font-weight: 600;
     font-size: 22px;
-    max-width: 700px;
+    width: 400px;
 }
 
 .introduccion a{
@@ -83,10 +80,11 @@ nav{
 
 .nosotros{
     height: auto;
-    width: 100%;
+    max-width: 100%;
 }
 
 .portada-nosotros{
+    width: 100%;
     height: 320px;
     background: linear-gradient(rgba(0,0,0,0.40),rgba(0,0,0,0.20)),url(img/portada-nosotros.webp);
     background-repeat: no-repeat;
@@ -94,22 +92,24 @@ nav{
     background-attachment: fixed;
     color: white;
     font-family: "Black Ops One", system-ui;
-    font-size: 75px;
+    font-size: 40px;
 }
 
 .contenido-nosotros{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 5%;
-    gap: 30px;
+    gap: 36px;
     font-family: "Inconsolata", monospace;
 }
 
 .contenido-nosotros figure{
-    width: 570px;
+    width: 340px;
+    object-fit: cover;
     overflow: hidden;
 }
 
@@ -119,7 +119,7 @@ nav{
 }
 
 .contenido-nosotros p{
-    font-size: 20px;
+    font-size: 22px;
 }
 
 .tecnologias-nosotros{
@@ -129,33 +129,14 @@ nav{
 
 .tecnologias{
     display: flex;
-    gap: 50px;
-}
-
-.slider-container{
-    width: 100%;
-    overflow: hidden;
-    height: auto;
-}
-
-.slider{
-    height: auto;
-    width: calc(145px * 9);
-    animation: slide 14s linear infinite;
-}
-
-@keyframes slide{
-    0%{
-        transform: translateX(0);
-    }
-    100%{
-        transform: translateX(-100%);
-    }
+    flex-direction: column;
+    gap: 40px;
 }
 
 .servicios{
     height: auto;
-    width: 100%;
+    min-width: 100%;
+    margin-top: 20px;
 }
 
 .portada-servicios{
@@ -165,7 +146,7 @@ nav{
     background-size: cover;
     background-attachment: fixed;
     font-family: "Black Ops One", system-ui;
-    font-size: 75px;
+    font-size: 40px;
     font-weight: 400;
 }
 
@@ -201,6 +182,8 @@ nav{
 .servicio{
     background: linear-gradient(#183155,#0a1e3b);
     font-family: 'Inconsolata',monospace;
+    height: 300px;
+    width: 320px;
 }
 
 .servicio i{
@@ -237,12 +220,13 @@ nav{
     background-size: cover;
     background-attachment: fixed;
     font-family: "Black Ops One", system-ui;
-    font-size: 75px;
+    font-size: 40px;
     font-weight: 400;
 }
 
 .contenido-contacto{
     display: flex;
+    flex-direction: column;
     margin-top: 5%;
     justify-content: center;
     margin-left: 8%;
@@ -350,12 +334,13 @@ footer{
     color: #fff;
     font-family: 'Inconsolata',monospace;
     padding: 55px;
-    position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .izquierda{
-    width: 700px;
     display: flex;
+    flex-direction: column;
     gap: 30px;
 }
 
@@ -384,6 +369,7 @@ footer{
     display: flex;
     align-items: center;
     gap: 20px;
+    width: 100%;
 }
 
 .enlaces a{
@@ -396,11 +382,11 @@ footer{
 }
 
 .derecha{
-    position: absolute;
-    top: 40%;
-    right: 90px;
     display: flex;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
+    margin: 40px 0 40px 0;
     gap: 30px;
     font-size: 20px;
 }
@@ -433,295 +419,206 @@ footer{
     margin-top: 15px;
 }
 
-@media (min-width:300px) and (max-width:678px){
+@media screen and (min-width:1200px){
+    #menu{
+        height: 150px;
+    }
+    
+    .introduccion{
+        height: 100vh;
+    }
+    
     .introduccion h1{
-        font-size: 40px; 
-    }
-    .introduccion p{
-        max-width: 900px;
-        font-size: 18px;
-    }
-    .introduccion a{
-        font-size: 20px;
-        padding: 12px;
-    }
-    .nosotros{
-        height: auto;
-    }
-    .nosotros .info p{
-        font-size: 20px;
-    }
-    .portada-nosotros{
-        width: 100%;
-        height: 200px;
-        font-size: 50px;
-        text-align: center;
-        background-position: center;
-        background-attachment: initial;
-    }
-    .contenido-nosotros{
-        margin-top: 15%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 0;
-    }
-    .contenido-nosotros figure{
-        width: 370px;
-    }
-    .contenido-nosotros img:hover{
-        transform: none;
-        transition: none;
-    }
-    .contenido-nosotros .info{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-    .contenido-nosotros h1{
-        width: 370px;
-        font-size: 35px;
-    }
-    .contenido-nosotros p{
-        font-size: 23px;
-        width: 350px;
-    }
-    .tecnologias{
-        flex-direction: column;
-        gap: 0px;
-    }
-    .slider{
-        height: calc(145px * 9.8);
-        animation: none;
-    }
-    .servicios{
-        height: auto;
-    }
-    .contenedor-servicios{
-        height: auto;
-    }
-    .servicios-arriba{
-        height: auto;
-    }
-    .servicios-abajo{
-        height: auto;
-        margin-bottom: 30px;
-    }
-    .portada-servicios{
-        width: 100%;
-        height: 200px;
-        font-size: 50px;
-        margin-top: 10%;
-        background-position: center;
-        background-attachment: initial;
-    }
-    .servicio{
-        width: 360px;
-    }
-    .servicio:hover{
-        box-shadow: none;
-    }
-    .contacto{
-        height: auto;
-    }
-    .portada-contacto{
-        width: 100%;
-        height: 200px;
-        font-size: 50px;
-        background-position: center;
-        background-attachment: initial;
-    }
-    .mapa{
-        margin-top: 120px;
-    }
-    .footer{
-        width: 100%;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 12%;
-    }
-    .izquierda{
-        flex-direction: column;
-        width: auto;
-    }
-    .titulo-logo{
-        border-right: none;
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-        padding-right: 0;
-        border-bottom: solid 3px #d8cf13;
-    }
-    .titulo-logo img{
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
-    .enlaces{
-        display: flex;
-        flex-direction: column;
-    }
-    .derecha{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: static;
-        text-align: center;
-        margin-top: 20%;
-        margin-bottom: 30px;
-    }
-}
-
-@media (min-width:750px) and (max-width:1200px){
-    #menu a{
-        font-size: 28px;
-    }
-    .introduccion h1{
-        font-size: 80px; 
-    }
-    .introduccion p{
-        max-width: 900px;
-        font-size: 35px;
-    }
-    .introduccion a{
-        font-size: 20px;
-        padding: 12px;
-    }
-    .nosotros{
-        height: auto;
-    }
-    .portada-nosotros{
-        height: 320px;
-        font-size: 80px;
-        background-position: center;
-        background-attachment: initial;
-        text-align: center;
-    }
-    .contenido-nosotros{
-        margin-top: 15%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 0;
-    }
-    .contenido-nosotros figure{
-        width: 600px;
-    }
-    .contenido-nosotros img:hover{
-        transform: none;
-        transition: none;
-    }
-    .contenido-nosotros .info{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-    .contenido-nosotros h1{
-        width: 500px;
+        width: 900px;
         font-size: 60px;
     }
-    .contenido-nosotros p{
-        width: 650px;
-        font-size: 30px;
+    
+    .introduccion p{
+        font-size: 20px;
+        width: 700px;
     }
+        
+    .nosotros{
+        height: auto;
+        max-width: 100%;
+    }
+    
+    .portada-nosotros{
+        font-size: 70px;
+    }
+    
+    .contenido-nosotros{
+        flex-direction: row;
+    }
+    
+    .contenido-nosotros figure{
+        width: 500px;
+    }
+
+    .contenido-nosotros img{
+        transition: transform .8s ease-in-out;
+    }
+    
+    .contenido-nosotros img:hover{
+        transform: scale(1.1);
+    }
+    
+    .contenido-nosotros p{
+        font-size: 18px;
+    }
+    
     .tecnologias{
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
-        place-items: center;
+        flex-direction: row;
         gap: 50px;
     }
-    .tecnologias-nosotros h1{
-        font-size: 45px;
+    
+    .slider-container{
+        width: 100%;
+        overflow: hidden;
+        height: auto;
     }
+    
     .slider{
-        height: 400px;
-        animation: none;
-    }
-    .servicios{
         height: auto;
+        width: calc(145px * 9);
+        animation: slide 14s linear infinite;
     }
-    .contenedor-servicios{
-        height: auto;
-        margin-bottom: 60px;
+    
+    @keyframes slide{
+        0%{
+            transform: translateX(0);
+        }
+        100%{
+            transform: translateX(-100%);
+        }
     }
+    
+  
     .portada-servicios{
-        height: 320px;
-        font-size: 90px;
-        margin-top: 10%;
-        background-position: center;
-        background-attachment: initial;
+        font-size: 75px;
     }
+        
     .servicio{
-        width: 360px;
+        background: linear-gradient(#183155,#0a1e3b);
+        font-family: 'Inconsolata',monospace;
+        height: 300px;
     }
+
     .servicio:hover{
-        box-shadow: none;
+        box-shadow: 5px 8px 10px rgb(0, 0, 0);
+        will-change: transform;
     }
+    
     .contacto{
+        max-width: 100%;
         height: auto;
     }
+    
     .portada-contacto{
-        height: 320px;
-        font-size: 90px;
-        background-position: center;
-        background-attachment: initial;
+        font-size: 75px;
     }
-    .mapa{
-        width: 100%;
-        margin-top: 120px;
-    }
-    .footer{
-        width: 100%;
-        height: auto;
+    
+    .contenido-contacto{
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 12%;
-    }
-    .izquierda{
-        flex-direction: column;
-        width: auto;
-    }
-    .titulo-logo{
-        border-right: none;
-        text-align: center;
-        align-items: center;
+        flex-direction: row;
+        margin-top: 5%;
         justify-content: center;
-        padding-right: 0;
-        border-bottom: solid 3px #d8cf13;
+        margin-left: 8%;
+        margin-right: 8%;
     }
-    .titulo-logo p{
-        font-size: 55px;
+    
+    .boton-whatsapp{
+        right: 30px;
+        bottom: 70px;
     }
-    .titulo-logo img{
-        margin-right: 0;
-        margin-bottom: 20px;
+    
+    @keyframes movimiento{
+        0%,100%{
+            transform: translateY(30px);
+        }
+        50%{
+            transform: translateY(10px);
+        }
     }
+    
+    .boton-whatsapp i{
+        font-size: 40px;
+        color: #fff;
+    }
+    
+    .mapa{
+        margin-top: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .mapa iframe{
+        width: 100%;
+        height: 360px;
+    }
+    
+    footer{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .izquierda{
+        width: 700px;
+        flex-direction: row;
+    }
+    
     .enlaces{
         display: flex;
-        flex-direction: column;
+        align-items: center;
+        gap: 20px;
     }
+    
     .enlaces a{
-        font-size: 30px;
+        text-decoration: none;
+        color: #fff;
     }
+    
+    .enlaces a:hover{
+        color: #d8cf13;
+    }
+    
     .derecha{
+        position: absolute;
+        top: 40%;
+        right: 90px;
         display: flex;
         align-items: center;
-        justify-content: center;
-        position: static;
-        text-align: center;
-        margin-top: 20%;
-        margin-bottom: 30px;
-        font-size: 40px;
+        gap: 30px;
+        font-size: 20px;
     }
+    
+    .bi-youtube{
+        color: #fff;
+        background-color: red;
+        padding: 10px;
+        border-radius: 999px;
+    }
+    
+    .bi-twitter-x{
+        color: #000;
+        background-color: #fff;
+        padding: 12px;
+        border-radius: 999px;
+    }
+    
+    .bi-facebook{
+        color: #000;
+        background-color: #2e65b2;
+        color: #fff;
+        padding: 12px;
+        border-radius: 999px;
+    }
+
     .centro{
-        font-size: 28px;
+        text-align: center;
+        font-weight: 100;
+        margin-top: 15px;
     }
 }
