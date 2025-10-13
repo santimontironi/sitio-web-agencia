@@ -619,3 +619,53 @@ footer{
         margin-top: 15px;
     }
 }
+
+@media screen and (min-width:1440px){
+    .introduccion{
+        height: 85vh;
+    }
+    .introduccion h1{
+        width: 1000px;
+        font-size: 70px;
+    }
+    
+    .introduccion p{
+        font-size: 24px;
+        width: 800px;
+    }
+    
+    .portada-servicios{
+        font-size: 85px;
+        font-size: 85px;
+    }
+
+    .portada-nosotros{
+        font-size: 85px;
+        height: 400px;
+    }
+
+    .portada-servicios{
+        font-size: 85px;
+        height: 400px;
+    }
+    
+    .portada-contacto{
+        font-size: 85px;
+        height: 400px;
+    }
+
+    .contenido-nosotros{
+        width: 80%;
+        margin: auto;
+        gap: 50px;
+        margin-top: 60px;
+    }
+
+    .contenido-nosotros .info p{
+        font-size: 20px;
+    }
+
+    .mapa{
+        margin-top: 4%;
+    }
+}
