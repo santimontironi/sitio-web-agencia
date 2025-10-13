@@ -585,9 +585,6 @@ footer{
     }
     
     .derecha{
-        position: absolute;
-        top: 40%;
-        right: 90px;
         display: flex;
         align-items: center;
         gap: 30px;
